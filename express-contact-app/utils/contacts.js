@@ -18,4 +18,12 @@ const loadContact = () => {
     return contacts;
 }
 
-module.exports = { loadContact };
+const findContact = (name) => {
+    const contacts = loadContact();
+    const contact = contacts.find(
+        (contact) => contact.name.toLowerCase() === name.toLowerCase()
+    );
+    return contact;
+}
+
+module.exports = { loadContact, findContact };
