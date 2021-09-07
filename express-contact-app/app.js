@@ -25,6 +25,10 @@ app.get('/contact', (req, res) => {
     });
 })
 
+app.get('contact/add', (req, res) => {
+    res.render('');
+})
+
 app.get('/contact/:name', (req, res) => {
     const contact = findContact(req.params.name);
     res.render('detail', {
